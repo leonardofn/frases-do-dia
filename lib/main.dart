@@ -25,6 +25,26 @@ class _HomeState extends State<Home> {
         child: Column(
           children: <Widget>[
             Image.asset("asses/images/logo.png"),
+            Text(
+              "Cique abaixo para gerar uma frase!",
+              style: TextStyle(
+                fontSize: 17,
+                fontStyle: FontStyle.italic,
+                color: Colors.black,
+              ),
+            ),
+            RaisedButton(
+              child: Text(
+                "Nova Frase",
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              color: Colors.green,
+              onPressed: (){}
+            )
           ],
         ),
       ),
