@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
 
   var _fraseGerada = "Clique abaixo para gerar uma frase!";
 
-  void gerarFrase() {
+  void _gerarFrase() {
     var numeroSorteado = Random().nextInt(_frases.length);
     setState(() {
       _fraseGerada = _frases[numeroSorteado];
@@ -44,9 +44,10 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Image.asset("asses/images/logo.png"),
+              Image.asset("assets/images/logo.png"),
               Text(
-                "Cique abaixo para gerar uma frase!",
+                _fraseGerada,
+                textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 25,
                   fontStyle: FontStyle.italic,
@@ -63,7 +64,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   color: Colors.green,
-                  onPressed: gerarFrase),
+                  onPressed: _gerarFrase),
             ],
           ),
         ),
