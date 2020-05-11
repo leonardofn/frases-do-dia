@@ -20,6 +20,14 @@ class _HomeState extends State<Home> {
         title: Text("Frases do Dia"),
         backgroundColor: Colors.green,
       ),
+      body: Container(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          children: <Widget>[
+            Image.asset("asses/images/logo.png"),
+          ],
+        ),
+      ),
     );
   }
 }
